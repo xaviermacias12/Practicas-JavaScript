@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Práctica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .exercises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .exercise-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eaeaea;
+        }
+        
+        .exercise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .exercise-header {
+            background: linear-gradient(90deg, #3498db 0%, #2c3e50 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .exercise-content {
+            padding: 20px;
+        }
+        
+        .exercise-content p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .exercise-link {
+            display: block;
+            text-align: center;
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .exercise-link:hover {
+            background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #6c757d;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        @media (max-width: 768px) {
+            .exercises-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicios de Práctica</h1>
+            <p class="subtitle">Desarrollo Web - Recopilación de ejercicios</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro">
+                <p>Bienvenido a mi colección de ejercicios de práctica. Aquí encontrarás diversos ejercicios que he realizado para mejorar mis habilidades en desarrollo web. Haz clic en cualquier ejercicio para verlo en detalle.</p>
+            </div>
+            
+            <div class="exercises-grid">
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <h2>Ejercicio #1</h2>
+                    </div>
+                    <div class="exercise-content">
+                        <p>Manipulación del DOM con JavaScript. Ejercicios de selección y modificación de elementos.</p>
+                        <a href="dom/dom1.html" class="exercise-link">Ver Ejercicio</a>
+                    </div>
+                </div>
+                
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <h2>Ejercicio #2</h2>
+                    </div>
+                    <div class="exercise-content">
+                        <p>Formularios interactivos con validación. Incluye diferentes tipos de inputs y validaciones.</p>
+                        <a href="dom/dom2.html" class="exercise-link">Ver Ejercicio</a>
+                    </div>
+                </div>
+                
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <h2>Ejercicio #3</h2>
+                    </div>
+                    <div class="exercise-content">
+                        <p>Galeria de imágenes con lightbox. Implementación con CSS Grid y JavaScript.</p>
+                        <a href="dom/dom3.html" class="exercise-link">Ver Ejercicio</a>
+                    </div>
+                </div>
+                
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <h2>Ejercicio #4</h2>
+                    </div>
+                    <div class="exercise-content">
+                        <p>Calculadora simple con operaciones básicas. Interfaz amigable y funcional.</p>
+                        <a href="#" class="exercise-link">Ver Ejercicio</a>
+                    </div>
+                </div>
+                
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <h2>Ejercicio #5</h2>
+                    </div>
+                    <div class="exercise-content">
+                        <p>Lista de tareas (To-Do). Permite agregar, eliminar y marcar tareas como completadas.</p>
+                        <a href="#" class="exercise-link">Ver Ejercicio</a>
+                    </div>
+                </div>
+                
+                <div class="exercise-card">
+                    <div class="exercise-header">
+                        <h2>Ejercicio #6</h2>
+                    </div>
+                    <div class="exercise-content">
+                        <p>Slider/Carrusel de contenido. Navegación entre diferentes slides de manera fluida.</p>
+                        <a href="#" class="exercise-link">Ver Ejercicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 - Ejercicios de Práctica | Desarrollado con HTML, CSS y JavaScript</p>
+        </footer>
+    </div>
+</body>
+</html>
