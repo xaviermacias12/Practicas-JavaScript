@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,14 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             color: #333;
             line-height: 1.6;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -27,28 +28,28 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow: hidden;
         }
-        
+
         header {
             background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
-        
+
         h1 {
             font-size: 2.8rem;
             margin-bottom: 10px;
         }
-        
+
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
         }
-        
+
         .content {
             padding: 30px;
         }
-        
+
         .exercise {
             margin-bottom: 50px;
             padding: 25px;
@@ -56,19 +57,19 @@
             background-color: #f8f9fa;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .exercise h2 {
             color: #2c3e50;
             margin-bottom: 15px;
             padding-bottom: 10px;
             border-bottom: 2px solid #4b6cb7;
         }
-        
+
         .exercise p {
             margin-bottom: 20px;
             line-height: 1.6;
         }
-        
+
         .code-container {
             background-color: #2c3e50;
             color: #ecf0f1;
@@ -77,35 +78,35 @@
             margin: 20px 0;
             overflow-x: auto;
         }
-        
+
         .code-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
         }
-        
+
         .code-header h3 {
             color: #ffffff;
         }
-        
+
         pre {
             white-space: pre-wrap;
             line-height: 1.5;
         }
-        
+
         .comment {
             color: #7f8c8d;
         }
-        
+
         .method {
             color: #e74c3c;
         }
-        
+
         .string {
             color: #2ecc71;
         }
-        
+
         button {
             background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
             color: white;
@@ -118,12 +119,12 @@
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-        
+
         .demo-area {
             background-color: white;
             padding: 20px;
@@ -131,7 +132,7 @@
             margin: 20px 0;
             border-left: 4px solid #4b6cb7;
         }
-        
+
         .result-area {
             background-color: #e8f4f8;
             padding: 15px;
@@ -139,12 +140,12 @@
             margin-top: 20px;
             border-left: 4px solid #3498db;
         }
-        
+
         .result-area h4 {
             color: #2c3e50;
             margin-bottom: 10px;
         }
-        
+
         .output {
             background-color: #f1f8ff;
             padding: 15px;
@@ -153,20 +154,20 @@
             font-family: monospace;
             white-space: pre-wrap;
         }
-        
+
         .console-message {
             color: #2c3e50;
             margin: 5px 0;
             padding: 5px;
             border-bottom: 1px dashed #ccc;
         }
-        
+
         .element-info {
             color: #3498db;
             margin-left: 20px;
             font-weight: bold;
         }
-        
+
         input {
             padding: 8px 12px;
             border: 1px solid #ddd;
@@ -174,14 +175,14 @@
             margin: 5px;
             width: 100px;
         }
-        
+
         footer {
             text-align: center;
             padding: 20px;
             background: #2c3e50;
             color: #ecf0f1;
         }
-        
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
@@ -189,19 +190,22 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>2. Ejercicios de Funciones con JavaScript</h1>
         </header>
-        
+
         <div class="content">
             <!-- Ejercicio 1:-->
             <section class="exercise">
                 <h2>Ejercicio 1: Suma de dos números</h2>
-                <p> Este ejercicio se centra en la creación de funciones para sumar dos números, utilizando tanto la sintaxis de 
-                    función tradicional como la de función flecha, para ello puedes utilizar la consola o un documento.</p>
-                
+                <p> Este ejercicio se centra en la creación de funciones para sumar dos números, utilizando tanto la
+                    sintaxis de
+                    función tradicional como la de función flecha, para ello puedes utilizar la consola o un documento.
+                </p>
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -214,24 +218,24 @@ function sumar(a, b) {
 <span class="comment">// Función Flecha</span>
 const sumarFlecha = (a, b) => a + b;</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <input type="number" id="num1a" placeholder="Número 1" value="5">
                     <input type="number" id="num1b" placeholder="Número 2" value="3">
                     <button id="runExercise1">Ejecutar Suma</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output1">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-            
+
             <!-- Ejercicio 2: -->
             <section class="exercise">
                 <h2>Ejercicio 2: División de dos números</h2>
                 <p>Manejando el caso de división por cero.</p>
-                
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -247,24 +251,24 @@ function dividir(a, b) {
 <span class="comment">// Función Flecha</span>
 const dividirFlecha = (a, b) => b == 0 ? 'Error: División por cero' : a / b;</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <input type="number" id="num2a" placeholder="Dividendo" value="8">
                     <input type="number" id="num2b" placeholder="Divisor" value="2">
                     <button id="runExercise2">Ejecutar División</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output2">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-            
+
             <!-- Ejercicio 3: -->
             <section class="exercise">
                 <h2>Ejercicio 3: Potencia de un número</h2>
                 <p>Calcula la potencia de un número elevado a un exponente.</p>
-                
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -277,24 +281,24 @@ function potencia(base, exponente) {
 <span class="comment">// Función Flecha</span>
 const potenciaFlecha = (base, exponente) => Math.pow(base, exponente);</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <input type="number" id="num3a" placeholder="Base" value="2">
                     <input type="number" id="num3b" placeholder="Exponente" value="3">
                     <button id="runExercise3">Calcular Potencia</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output3">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-            
+
             <!-- Ejercicio 4: -->
             <section class="exercise">
                 <h2>Ejercicio 4: Mayor de 2 números</h2>
                 <p>Encuentra el mayor de dos números.</p>
-                
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -311,24 +315,81 @@ function mayor(num1, num2) {
 <span class="comment">// Función Flecha</span>
 const mayorFlecha = (num1, num2) => (num1 > num2) ? num1 : num2;</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <input type="number" id="num4a" placeholder="Número 1" value="5">
                     <input type="number" id="num4b" placeholder="Número 2" value="10">
                     <button id="runExercise4">Encontrar Mayor</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output4">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-            
+
+            <!-- Ejercicio Personal: -->
+            <section class="exercise">
+                <h2>Ejercicio Personal. Función tradicional y Función flecha.</h2>
+                <p>Crea 2 ejemplos personales de función tradicional y función flecha.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Ejemplo 1: Calcular IVA</h3>
+                    </div>
+                    <pre><code><span class="comment">// Función Tradicional - Calcular IVA</span>
+function calcularIva(precio) {
+    const iva = precio * 0.16;
+    return precio + iva;
+}
+
+<span class="comment">// Función Flecha - Calcular IVA</span>
+const calcularIvaFlecha = (precio) => precio * 1.16;</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <input type="number" id="precioInput" placeholder="Precio" value="100">
+                    <button id="runPersonal1">Calcular IVA</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados:</h4>
+                    <div class="output" id="outputPersonal1">Los resultados aparecerán aquí...</div>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Ejemplo 2: Verificar Par/Impar</h3>
+                    </div>
+                    <pre><code><span class="comment">// Función Tradicional - Verificar Par/Impar</span>
+function esPar(numero) {
+    if (numero % 2 === 0) {
+        return "Par";
+    } else {
+        return "Impar";
+    }
+}
+
+<span class="comment">// Función Flecha - Verificar Par/Impar</span>
+const esParFlecha = (numero) => numero % 2 === 0 ? "Par" : "Impar";</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <input type="number" id="numeroInput" placeholder="Número" value="7">
+                    <button id="runPersonal2">Verificar Par/Impar</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados:</h4>
+                    <div class="output" id="outputPersonal2">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+
             <!-- Ejercicio 5: -->
             <section class="exercise">
                 <h2>Ejercicio 5: Función de orden superior</h2>
                 <p>Función que toma otra función como parámetro (funciones de orden superior).</p>
-                
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -344,7 +405,7 @@ const multiplicar = (a, b) => a * b;
 const restar = (a, b) => a - b;
 const dividir = (a, b) => b !== 0 ? a / b : 'Error: División por cero';</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <input type="number" id="num5a" placeholder="Número 1" value="5">
                     <input type="number" id="num5b" placeholder="Número 2" value="3">
@@ -353,18 +414,45 @@ const dividir = (a, b) => b !== 0 ? a / b : 'Error: División por cero';</code><
                     <button id="runExercise5restar">Restar</button>
                     <button id="runExercise5dividir">Dividir</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output5">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-            
+
+            <!-- Ejercicio Personal: -->
+            <section class="exercise">
+                <h2>Ejercicio Personal: Funciones de Orden Superior</h2>
+                <p>Agrega 2 operaciones más y mandalas llamar.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Operaciones Adicionales</h3>
+                    </div>
+                    <pre><code><span class="comment">// Operaciones adicionales</span>
+const potencia = (a, b) => Math.pow(a, b);
+const modulo = (a, b) => b !== 0 ? a % b : 'Error: División por cero';</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <input type="number" id="numOp1" placeholder="Número 1" value="8">
+                    <input type="number" id="numOp2" placeholder="Número 2" value="3">
+                    <button id="runPotencia">Potencia (a^b)</button>
+                    <button id="runModulo">Módulo (a % b)</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados:</h4>
+                    <div class="output" id="outputPersonalOp">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+
             <!-- Ejercicio 6: -->
             <section class="exercise">
                 <h2>Ejercicio 6: Función de orden superior con map</h2>
                 <p>Función que aplica una operación a cada elemento de un array utilizando el método map.</p>
-                
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -379,25 +467,49 @@ const duplicar = (x) => x * 2;
 const triplicar = (x) => x * 3;
 const cuadrado = (x) => x * x;</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <input type="text" id="arrayInput" placeholder="Array (ej: 1,2,3,4)" value="1,2,3,4">
                     <button id="runExercise6duplicar">Duplicar</button>
                     <button id="runExercise6triplicar">Triplicar</button>
                     <button id="runExercise6cuadrado">Cuadrado</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output6">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-            
+
+            <!-- Ejercicio Personal: -->
+            <section class="exercise">
+                <h2>Ejercicio Personal: Orden Superior con Map</h2>
+                <p>Agrega otra operación más y mandala llamar.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Operacion Adicional con Map</h3>
+                    </div>
+                    <pre><code><span class="comment">// Operaciones adicionales</span>
+const raizCuadrada = (x) => Math.sqrt(x);</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <input type="text" id="arrayInputMap" placeholder="Array (9,16,25)" value="9,16,25">
+                    <button id="runRaizCuadrada">Raíz Cuadrada</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados:</h4>
+                    <div class="output" id="outputPersonalMap">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+
             <!-- Ejercicio 7: -->
             <section class="exercise">
                 <h2>Ejercicio 7: Closure para contar</h2>
                 <p>Función que utiliza closures para mantener un contador privado.</p>
-                
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -410,23 +522,23 @@ const cuadrado = (x) => x * x;</code></pre>
     };
 }</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <button id="runExercise7">Crear Contador</button>
                     <button id="incrementExercise7">Incrementar Contador</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output7">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-            
+
             <!-- Ejercicio 8: -->
             <section class="exercise">
                 <h2>Ejercicio 8: Función que retorna otra función</h2>
                 <p>Función que devuelve otra función, ilustrando el concepto de closures.</p>
-                
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -437,25 +549,25 @@ const cuadrado = (x) => x * x;</code></pre>
     };
 }</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <input type="text" id="nombreInput" placeholder="Tu nombre" value="Xavier">
                     <button id="runExercise8espanol">Saludo Español</button>
                     <button id="runExercise8ingles">Saludo Inglés</button>
                     <button id="runExercise8frances">Saludo Francés</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output8">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-            
+
             <!-- Ejercicio 9: -->
             <section class="exercise">
                 <h2>Ejercicio 9: Funciones con argumentos predeterminados</h2>
                 <p>Función que utiliza closures para crear multiplicadores.</p>
-                
+
                 <div class="code-container">
                     <div class="code-header">
                         <h3>Código JavaScript</h3>
@@ -466,21 +578,189 @@ const cuadrado = (x) => x * x;</code></pre>
     };
 }</code></pre>
                 </div>
-                
+
                 <div class="demo-area">
                     <input type="number" id="num9" placeholder="Número" value="5">
                     <button id="runExercise9duplicar">Duplicar</button>
                     <button id="runExercise9triplicar">Triplicar</button>
                     <button id="runExercise9cuadruplicar">Cuadruplicar</button>
                 </div>
-                
+
                 <div class="result-area">
                     <h4>Resultados:</h4>
                     <div class="output" id="output9">Los resultados aparecerán aquí...</div>
                 </div>
             </section>
-        </div>
+
+            <!-- Juego de Adivinar Números -->
+            <section class="exercise">
+                <h2>Juego de Adivinar</h2>
+                <p>Juego interactivo donde debes adivinar un número dentro de un rango específico.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Juego Completo</h3>
+                    </div>
+                    <pre><code><span class="comment">// Crear la función para generar un número aleatorio dentro de un rango</span>
+function crearGeneradorNumeroAleatorio(min, max) {
+    return function() {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+}
+
+<span class="comment">// Crear función de adivinanza</span>
+function crearJuegoAdivinarNumero(generadorNumero) {
+    const numeroAleatorio = generadorNumero();
+    let intentos = 0;
+    
+    return function(adivina) {
+        intentos += 1;
         
+        if (adivina < numeroAleatorio) {
+            return `El número es mayor. Intentos: ${intentos}`;
+        } else if (adivina > numeroAleatorio) {
+            return `El número es menor. Intentos: ${intentos}`;
+        } else {
+            return `¡Felicidades! Adivinaste el número en ${intentos} intentos.`;
+        }
+    };
+}
+
+<span class="comment">// Crear función para iniciar el juego </span>
+function iniciarJuego() {
+    const rangoMin = parseInt(prompt("Ingrese el valor mínimo del rango:"));
+    const rangoMax = parseInt(prompt("Ingrese el valor máximo del rango:"));
+    
+    const generadorNumero = crearGeneradorNumeroAleatorio(rangoMin, rangoMax);
+    let juego = crearJuegoAdivinarNumero(generadorNumero);
+    
+    let resultado;
+    do {
+        const adivina = parseInt(prompt("Adivina el número:"));
+        resultado = juego(adivina);
+        alert(resultado);
+    } while (!resultado.includes("¡Felicidades!"));
+    
+    if (confirm("¿Quieres jugar de nuevo?")) {
+        iniciarJuego();
+    }
+}</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <h3>Juego de Adivinanza (Versión Mejorada con Interfaz)</h3>
+                    <div>
+                        <label for="rangoMin">Límite inferior:</label>
+                        <input type="number" id="rangoMin" value="1" min="1">
+                    </div>
+                    <div>
+                        <label for="rangoMax">Límite superior:</label>
+                        <input type="number" id="rangoMax" value="100" min="2">
+                    </div>
+                    <button id="iniciarJuegoBtn">Iniciar Juego</button>
+
+                    <div id="juegoContainer" style="display: none; margin-top: 20px;">
+                        <input type="number" id="adivinaInput" placeholder="Tu adivinanza">
+                        <button id="adivinarBtn">Adivinar</button>
+                        <button id="reiniciarJuegoBtn">Reiniciar Juego</button>
+                    </div>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados del Juego:</h4>
+                    <div class="output" id="outputJuego">Presiona "Iniciar Juego" para comenzar...</div>
+                </div>
+            </section>
+
+            <!-- Ejercicio Final: Sistema de Descuentos con Closures y Funciones de Orden Superior -->
+            <section class="exercise">
+                <h2>Ejercicio Personal Final: Sistema de Descuentos Avanzado</h2>
+                <p>Sistema que aplica descuentos personalizados usando closures y funciones de orden superior.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Sistema de Descuentos</h3>
+                    </div>
+                    <pre><code><span class="comment">// CLOSURE: Función que crea aplicadores de descuento personalizados</span>
+function crearAplicadorDescuento(tipoCliente) {
+    const descuentos = {
+        regular: 0.1,    // 10% descuento
+        premium: 0.2,    // 20% descuento
+        vip: 0.3         // 30% descuento
+    };
+    
+    const descuento = descuentos[tipoCliente] || 0;
+    
+    <span class="comment">// Retornamos una función que aplica el descuento (CLOSURE)</span>
+    return function(precioOriginal) {
+        return precioOriginal * (1 - descuento);
+    };
+}
+
+<span class="comment">// FUNCIÓN DE ORDEN SUPERIOR: Aplica un procesamiento a cada producto</span>
+function procesarCarrito(carrito, procesador) {
+    return carrito.map(procesador);
+}
+
+<span class="comment">// Función que genera reportes de descuentos</span>
+function generarReporte(carrito, clienteTipo) {
+    const aplicarDescuento = crearAplicadorDescuento(clienteTipo);
+    const procesarConDescuento = (producto) => ({
+        nombre: producto.nombre,
+        precioOriginal: producto.precio,
+        precioConDescuento: aplicarDescuento(producto.precio),
+        ahorro: producto.precio - aplicarDescuento(producto.precio)
+    });
+    
+    <span class="comment">// Usando función de orden superior</span>
+    return procesarCarrito(carrito, procesarConDescuento);
+}
+
+<span class="comment">// Función para calcular totales (otra función de orden superior)</span>
+function calcularTotales(carritoProcesado, calculadora) {
+    return calculadora(carritoProcesado);
+}</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <h3>Simulador de Carrito de Compras</h3>
+
+                    <div>
+                        <label for="tipoCliente">Tipo de Cliente:</label>
+                        <select id="tipoCliente">
+                            <option value="regular">Regular (10% descuento)</option>
+                            <option value="premium">Premium (20% descuento)</option>
+                            <option value="vip">VIP (30% descuento)</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <h4>Productos en Carrito:</h4>
+                        <div id="listaProductos">
+                            <div>Producto 1: $100 <button class="btn-quitar" data-id="0">Quitar</button></div>
+                            <div>Producto 2: $200 <button class="btn-quitar" data-id="1">Quitar</button></div>
+                            <div>Producto 3: $300 <button class="btn-quitar" data-id="2">Quitar</button></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <input type="number" id="nuevoPrecio" placeholder="Precio nuevo producto" value="50">
+                        <button id="agregarProducto">Agregar Producto</button>
+                    </div>
+
+                    <button id="calcularDescuentos" style="margin-top: 15px;">Calcular Descuentos</button>
+                    <button id="reiniciarCarrito">Reiniciar Carrito</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Reporte de Descuentos:</h4>
+                    <div class="output" id="outputDescuentos">Presiona "Calcular Descuentos" para generar el reporte...
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
         <footer>
         </footer>
     </div>
@@ -490,13 +770,13 @@ const cuadrado = (x) => x * x;</code></pre>
         document.getElementById('runExercise1').addEventListener('click', () => {
             const a = parseInt(document.getElementById('num1a').value) || 0;
             const b = parseInt(document.getElementById('num1b').value) || 0;
-            
+
             function sumar(a, b) {
                 return a + b;
             }
-            
+
             const sumarFlecha = (a, b) => a + b;
-            
+
             const output = document.getElementById('output1');
             output.innerHTML = `Función tradicional: ${sumar(a, b)}\n`;
             output.innerHTML += `Función flecha: ${sumarFlecha(a, b)}`;
@@ -506,16 +786,16 @@ const cuadrado = (x) => x * x;</code></pre>
         document.getElementById('runExercise2').addEventListener('click', () => {
             const a = parseInt(document.getElementById('num2a').value) || 0;
             const b = parseInt(document.getElementById('num2b').value) || 0;
-            
+
             function dividir(a, b) {
                 if (b == 0) {
                     return 'Error: División por cero';
                 }
                 return a / b;
             }
-            
+
             const dividirFlecha = (a, b) => b == 0 ? 'Error: División por cero' : a / b;
-            
+
             const output = document.getElementById('output2');
             output.innerHTML = `Función tradicional: ${dividir(a, b)}\n`;
             output.innerHTML += `Función flecha: ${dividirFlecha(a, b)}`;
@@ -525,13 +805,13 @@ const cuadrado = (x) => x * x;</code></pre>
         document.getElementById('runExercise3').addEventListener('click', () => {
             const base = parseInt(document.getElementById('num3a').value) || 0;
             const exponente = parseInt(document.getElementById('num3b').value) || 0;
-            
+
             function potencia(base, exponente) {
                 return Math.pow(base, exponente);
             }
-            
+
             const potenciaFlecha = (base, exponente) => Math.pow(base, exponente);
-            
+
             const output = document.getElementById('output3');
             output.innerHTML = `Función tradicional: ${potencia(base, exponente)}\n`;
             output.innerHTML += `Función flecha: ${potenciaFlecha(base, exponente)}`;
@@ -541,7 +821,7 @@ const cuadrado = (x) => x * x;</code></pre>
         document.getElementById('runExercise4').addEventListener('click', () => {
             const num1 = parseInt(document.getElementById('num4a').value) || 0;
             const num2 = parseInt(document.getElementById('num4b').value) || 0;
-            
+
             function mayor(num1, num2) {
                 if (num1 > num2) {
                     return num1;
@@ -549,45 +829,80 @@ const cuadrado = (x) => x * x;</code></pre>
                     return num2;
                 }
             }
-            
+
             const mayorFlecha = (num1, num2) => (num1 > num2) ? num1 : num2;
-            
+
             const output = document.getElementById('output4');
             output.innerHTML = `Función tradicional: ${mayor(num1, num2)}\n`;
             output.innerHTML += `Función flecha: ${mayorFlecha(num1, num2)}`;
         });
 
+        // Ejercicio Personal: 
+        document.getElementById('runPersonal1').addEventListener('click', () => {
+            const precio = parseInt(document.getElementById('precioInput').value) || 0;
+
+            function calcularIva(precio) {
+                const iva = precio * 0.16;
+                return precio + iva;
+            }
+
+            const calcularIvaFlecha = (precio) => precio * 1.16;
+
+            const output = document.getElementById('outputPersonal1');
+            output.innerHTML = `Función tradicional: $${calcularIva(precio).toFixed(2)}\n`;
+            output.innerHTML += `Función flecha: $${calcularIvaFlecha(precio).toFixed(2)}`;
+        });
+
+        document.getElementById('runPersonal2').addEventListener('click', () => {
+            const numero = parseInt(document.getElementById('numeroInput').value) || 0;
+
+            function esPar(numero) {
+                if (numero % 2 === 0) {
+                    return "Par";
+                } else {
+                    return "Impar";
+                }
+            }
+
+            const esParFlecha = (numero) => numero % 2 === 0 ? "Par" : "Impar";
+
+            const output = document.getElementById('outputPersonal2');
+            output.innerHTML = `Función tradicional: ${esPar(numero)}\n`;
+            output.innerHTML += `Función flecha: ${esParFlecha(numero)}`;
+        });
+
+
         // Ejercicio 5:
         function ejecutarOperacion(a, b, operacion) {
             return operacion(a, b);
         }
-        
+
         const sumar = (a, b) => a + b;
         const multiplicar = (a, b) => a * b;
         const restar = (a, b) => a - b;
         const dividirEj5 = (a, b) => b !== 0 ? a / b : 'Error: División por cero';
-        
+
         document.getElementById('runExercise5suma').addEventListener('click', () => {
             const a = parseInt(document.getElementById('num5a').value) || 0;
             const b = parseInt(document.getElementById('num5b').value) || 0;
             const output = document.getElementById('output5');
             output.innerHTML = `Suma: ${ejecutarOperacion(a, b, sumar)}`;
         });
-        
+
         document.getElementById('runExercise5multiplicar').addEventListener('click', () => {
             const a = parseInt(document.getElementById('num5a').value) || 0;
             const b = parseInt(document.getElementById('num5b').value) || 0;
             const output = document.getElementById('output5');
             output.innerHTML = `Multiplicación: ${ejecutarOperacion(a, b, multiplicar)}`;
         });
-        
+
         document.getElementById('runExercise5restar').addEventListener('click', () => {
             const a = parseInt(document.getElementById('num5a').value) || 0;
             const b = parseInt(document.getElementById('num5b').value) || 0;
             const output = document.getElementById('output5');
             output.innerHTML = `Resta: ${ejecutarOperacion(a, b, restar)}`;
         });
-        
+
         document.getElementById('runExercise5dividir').addEventListener('click', () => {
             const a = parseInt(document.getElementById('num5a').value) || 0;
             const b = parseInt(document.getElementById('num5b').value) || 0;
@@ -595,15 +910,38 @@ const cuadrado = (x) => x * x;</code></pre>
             output.innerHTML = `División: ${ejecutarOperacion(a, b, dividirEj5)}`;
         });
 
+
+        // Ejercicio Personal:
+        const potenciaOp = (a, b) => Math.pow(a, b);
+        const moduloOp = (a, b) => b !== 0 ? a % b : 'Error: División por cero';
+
+        function ejecutarOperacion(a, b, operacion) {
+            return operacion(a, b);
+        }
+
+        document.getElementById('runPotencia').addEventListener('click', () => {
+            const a = parseInt(document.getElementById('numOp1').value) || 0;
+            const b = parseInt(document.getElementById('numOp2').value) || 0;
+            const output = document.getElementById('outputPersonalOp');
+            output.innerHTML = `Potencia (${a}^${b}): ${ejecutarOperacion(a, b, potenciaOp)}`;
+        });
+
+        document.getElementById('runModulo').addEventListener('click', () => {
+            const a = parseInt(document.getElementById('numOp1').value) || 0;
+            const b = parseInt(document.getElementById('numOp2').value) || 0;
+            const output = document.getElementById('outputPersonalOp');
+            output.innerHTML = `Módulo (${a} % ${b}): ${ejecutarOperacion(a, b, moduloOp)}`;
+        });
+
         // Ejercicio 6:
         function aplicarOperacionArray(arr, operacion) {
             return arr.map(operacion);
         }
-        
+
         const duplicar = (x) => x * 2;
         const triplicar = (x) => x * 3;
         const cuadrado = (x) => x * x;
-        
+
         document.getElementById('runExercise6duplicar').addEventListener('click', () => {
             const arrayInput = document.getElementById('arrayInput').value;
             const array = arrayInput.split(',').map(num => parseInt(num.trim()) || 0);
@@ -611,7 +949,7 @@ const cuadrado = (x) => x * x;</code></pre>
             output.innerHTML = `Array original: [${array}]\n`;
             output.innerHTML += `Array duplicado: [${aplicarOperacionArray(array, duplicar)}]`;
         });
-        
+
         document.getElementById('runExercise6triplicar').addEventListener('click', () => {
             const arrayInput = document.getElementById('arrayInput').value;
             const array = arrayInput.split(',').map(num => parseInt(num.trim()) || 0);
@@ -619,7 +957,7 @@ const cuadrado = (x) => x * x;</code></pre>
             output.innerHTML = `Array original: [${array}]\n`;
             output.innerHTML += `Array triplicado: [${aplicarOperacionArray(array, triplicar)}]`;
         });
-        
+
         document.getElementById('runExercise6cuadrado').addEventListener('click', () => {
             const arrayInput = document.getElementById('arrayInput').value;
             const array = arrayInput.split(',').map(num => parseInt(num.trim()) || 0);
@@ -628,23 +966,38 @@ const cuadrado = (x) => x * x;</code></pre>
             output.innerHTML += `Array al cuadrado: [${aplicarOperacionArray(array, cuadrado)}]`;
         });
 
+
+        // Ejercicio Personal:
+        const raizCuadrada = (x) => Math.sqrt(x);
+        function aplicarOperacionArray(arr, operacion) {
+            return arr.map(operacion);
+        }
+        document.getElementById('runRaizCuadrada').addEventListener('click', () => {
+            const arrayInput = document.getElementById('arrayInputMap').value;
+            const array = arrayInput.split(',').map(num => parseInt(num.trim()) || 0);
+            const output = document.getElementById('outputPersonalMap');
+            output.innerHTML = `Array original: [${array}]\n`;
+            output.innerHTML += `Raíces cuadradas: [${aplicarOperacionArray(array, raizCuadrada).map(n => n.toFixed(2))}]`;
+        });
+
+
         // Ejercicio 7:
         let contador;
-        
+
         document.getElementById('runExercise7').addEventListener('click', () => {
             function crearContador() {
                 let contador = 0;
-                return function() {
+                return function () {
                     contador += 1;
                     return contador;
                 };
             }
-            
+
             contador = crearContador();
             const output = document.getElementById('output7');
             output.innerHTML = 'Contador creado. Presiona "Incrementar Contador" para comenzar.';
         });
-        
+
         document.getElementById('incrementExercise7').addEventListener('click', () => {
             if (contador) {
                 const output = document.getElementById('output7');
@@ -658,37 +1011,37 @@ const cuadrado = (x) => x * x;</code></pre>
         // Ejercicio 8:
         document.getElementById('runExercise8espanol').addEventListener('click', () => {
             function crearSaludo(saludo) {
-                return function(nombre) {
+                return function (nombre) {
                     return `${saludo}, ${nombre}`;
                 };
             }
-            
+
             const saludarEnEspanol = crearSaludo("Hola");
             const nombre = document.getElementById('nombreInput').value || 'Xavier';
             const output = document.getElementById('output8');
             output.innerHTML = saludarEnEspanol(nombre);
         });
-        
+
         document.getElementById('runExercise8ingles').addEventListener('click', () => {
             function crearSaludo(saludo) {
-                return function(nombre) {
+                return function (nombre) {
                     return `${saludo}, ${nombre}`;
                 };
             }
-            
+
             const saludarEnIngles = crearSaludo("Hello");
             const nombre = document.getElementById('nombreInput').value || 'Juan';
             const output = document.getElementById('output8');
             output.innerHTML = saludarEnIngles(nombre);
         });
-        
+
         document.getElementById('runExercise8frances').addEventListener('click', () => {
             function crearSaludo(saludo) {
-                return function(nombre) {
+                return function (nombre) {
                     return `${saludo}, ${nombre}`;
                 };
             }
-            
+
             const saludarEnFrances = crearSaludo("Bonjour");
             const nombre = document.getElementById('nombreInput').value || 'Juan';
             const output = document.getElementById('output8');
@@ -698,42 +1051,266 @@ const cuadrado = (x) => x * x;</code></pre>
         // Ejercicio 9:
         document.getElementById('runExercise9duplicar').addEventListener('click', () => {
             function crearMultiplicador(factor) {
-                return function(numero) {
+                return function (numero) {
                     return numero * factor;
                 };
             }
-            
+
             const duplicar = crearMultiplicador(2);
             const numero = parseInt(document.getElementById('num9').value) || 0;
             const output = document.getElementById('output9');
             output.innerHTML = `Resultado: ${duplicar(numero)}`;
         });
-        
+
         document.getElementById('runExercise9triplicar').addEventListener('click', () => {
             function crearMultiplicador(factor) {
-                return function(numero) {
+                return function (numero) {
                     return numero * factor;
                 };
             }
-            
+
             const triplicar = crearMultiplicador(3);
             const numero = parseInt(document.getElementById('num9').value) || 0;
             const output = document.getElementById('output9');
             output.innerHTML = `Resultado: ${triplicar(numero)}`;
         });
-        
+
         document.getElementById('runExercise9cuadruplicar').addEventListener('click', () => {
             function crearMultiplicador(factor) {
-                return function(numero) {
+                return function (numero) {
                     return numero * factor;
                 };
             }
-            
+
             const cuadruplicar = crearMultiplicador(4);
             const numero = parseInt(document.getElementById('num9').value) || 0;
             const output = document.getElementById('output9');
             output.innerHTML = `Resultado: ${cuadruplicar(numero)}`;
         });
+
+        // Juego de Adivinar
+        let juegoActual = null;
+        let generadorActual = null;
+
+        document.getElementById('iniciarJuegoBtn').addEventListener('click', () => {
+            const rangoMin = parseInt(document.getElementById('rangoMin').value) || 1;
+            const rangoMax = parseInt(document.getElementById('rangoMax').value) || 100;
+
+            if (rangoMin >= rangoMax) {
+                alert("El límite inferior debe ser menor que el límite superior.");
+                return;
+            }
+
+            generadorActual = crearGeneradorNumeroAleatorio(rangoMin, rangoMax);
+            juegoActual = crearJuegoAdivinarNumero(generadorActual);
+
+            document.getElementById('juegoContainer').style.display = 'block';
+            document.getElementById('outputJuego').innerHTML =
+                `Juego iniciado! Adivina un número entre ${rangoMin} y ${rangoMax}.`;
+        });
+
+        document.getElementById('adivinarBtn').addEventListener('click', () => {
+            if (!juegoActual) {
+                alert("Primero debes iniciar el juego.");
+                return;
+            }
+
+            const adivina = parseInt(document.getElementById('adivinaInput').value);
+
+            if (isNaN(adivina)) {
+                alert("Por favor, ingresa un número válido.");
+                return;
+            }
+
+            const resultado = juegoActual(adivina);
+            document.getElementById('outputJuego').innerHTML = resultado;
+
+            if (resultado.includes("¡Felicidades!")) {
+                document.getElementById('adivinarBtn').disabled = true;
+            }
+
+            document.getElementById('adivinaInput').value = '';
+            document.getElementById('adivinaInput').focus();
+        });
+
+        document.getElementById('reiniciarJuegoBtn').addEventListener('click', () => {
+            if (!generadorActual) return;
+
+            juegoActual = crearJuegoAdivinarNumero(generadorActual);
+            document.getElementById('adivinarBtn').disabled = false;
+            document.getElementById('outputJuego').innerHTML =
+                "Juego reiniciado! Adivina de nuevo.";
+            document.getElementById('adivinaInput').value = '';
+            document.getElementById('adivinaInput').focus();
+        });
+
+        function crearGeneradorNumeroAleatorio(min, max) {
+            return function () {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            };
+        }
+
+        function crearJuegoAdivinarNumero(generadorNumero) {
+            const numeroAleatorio = generadorNumero();
+            let intentos = 0;
+
+            return function (adivina) {
+                intentos += 1;
+
+                if (adivina < numeroAleatorio) {
+                    return `El número es mayor. Intentos: ${intentos}`;
+                } else if (adivina > numeroAleatorio) {
+                    return `El número es menor. Intentos: ${intentos}`;
+                } else {
+                    return `¡Felicidades! Adivinaste el número en ${intentos} intentos.`;
+                }
+            };
+        }
+
+        function iniciarJuegoPrompts() {
+            const rangoMin = parseInt(prompt("Ingrese el valor mínimo del rango:"));
+            const rangoMax = parseInt(prompt("Ingrese el valor máximo del rango:"));
+
+            const generadorNumero = crearGeneradorNumeroAleatorio(rangoMin, rangoMax);
+            let juego = crearJuegoAdivinarNumero(generadorNumero);
+
+            let resultado;
+            do {
+                const adivina = parseInt(prompt("Adivina el número:"));
+                resultado = juego(adivina);
+                alert(resultado);
+            } while (!resultado.includes("¡Felicidades!"));
+
+            if (confirm("¿Quieres jugar de nuevo?")) {
+                iniciarJuegoPrompts();
+            }
+        }
+
+        // Ejercicio Final: Sistema de Descuentos con Closures y Funciones de Orden Superior
+
+        // Datos iniciales
+        let carrito = [
+            { nombre: "Producto 1", precio: 100 },
+            { nombre: "Producto 2", precio: 200 },
+            { nombre: "Producto 3", precio: 300 }
+        ];
+
+        // CLOSURE: Función que crea aplicadores de descuento personalizados
+        function crearAplicadorDescuento(tipoCliente) {
+            const descuentos = {
+                regular: 0.1,    // 10% descuento
+                premium: 0.2,    // 20% descuento
+                vip: 0.3         // 30% descuento
+            };
+
+            const descuento = descuentos[tipoCliente] || 0;
+
+            // Retornamos una función que aplica el descuento (CLOSURE)
+            return function (precioOriginal) {
+                return precioOriginal * (1 - descuento);
+            };
+        }
+
+        // FUNCIÓN DE ORDEN SUPERIOR: Aplica un procesamiento a cada producto
+        function procesarCarrito(carrito, procesador) {
+            return carrito.map(procesador);
+        }
+
+        // Función que genera reportes de descuentos
+        function generarReporte(carrito, clienteTipo) {
+            const aplicarDescuento = crearAplicadorDescuento(clienteTipo);
+            const procesarConDescuento = (producto) => ({
+                nombre: producto.nombre,
+                precioOriginal: producto.precio,
+                precioConDescuento: aplicarDescuento(producto.precio),
+                ahorro: producto.precio - aplicarDescuento(producto.precio)
+            });
+
+            // Usando función de orden superior
+            return procesarCarrito(carrito, procesarConDescuento);
+        }
+
+        // Función para calcular totales (otra función de orden superior)
+        function calcularTotales(carritoProcesado) {
+            const calculadora = (carrito) => ({
+                totalOriginal: carrito.reduce((sum, item) => sum + item.precioOriginal, 0),
+                totalConDescuento: carrito.reduce((sum, item) => sum + item.precioConDescuento, 0),
+                totalAhorrado: carrito.reduce((sum, item) => sum + item.ahorro, 0)
+            });
+
+            return calculadora(carritoProcesado);
+        }
+
+        // Actualizar la visualización del carrito
+        function actualizarListaProductos() {
+            const lista = document.getElementById('listaProductos');
+            lista.innerHTML = '';
+
+            carrito.forEach((producto, index) => {
+                const div = document.createElement('div');
+                div.innerHTML = `${producto.nombre}: $${producto.precio} 
+                        <button class="btn-quitar" data-id="${index}">Quitar</button>`;
+                lista.appendChild(div);
+            });
+
+            // Reasignar event listeners a los botones
+            document.querySelectorAll('.btn-quitar').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = parseInt(e.target.getAttribute('data-id'));
+                    carrito.splice(id, 1);
+                    actualizarListaProductos();
+                });
+            });
+        }
+
+        // Manejadores de eventos
+        document.getElementById('calcularDescuentos').addEventListener('click', () => {
+            const tipoCliente = document.getElementById('tipoCliente').value;
+            const reporte = generarReporte(carrito, tipoCliente);
+            const totales = calcularTotales(reporte);
+
+            let output = `=== REPORTE DE DESCUENTOS (Cliente ${tipoCliente.toUpperCase()}) ===\n\n`;
+
+            reporte.forEach(item => {
+                output += `${item.nombre}:\n`;
+                output += `  Precio original: $${item.precioOriginal}\n`;
+                output += `  Precio con descuento: $${item.precioConDescuento.toFixed(2)}\n`;
+                output += `  Ahorro: $${item.ahorro.toFixed(2)}\n\n`;
+            });
+
+            output += `=== TOTALES ===\n`;
+            output += `Total original: $${totales.totalOriginal}\n`;
+            output += `Total con descuento: $${totales.totalConDescuento.toFixed(2)}\n`;
+            output += `Total ahorrado: $${totales.totalAhorrado.toFixed(2)}\n`;
+
+            document.getElementById('outputDescuentos').innerHTML = output;
+        });
+
+        document.getElementById('agregarProducto').addEventListener('click', () => {
+            const precio = parseInt(document.getElementById('nuevoPrecio').value) || 0;
+            if (precio > 0) {
+                carrito.push({
+                    nombre: `Producto ${carrito.length + 1}`,
+                    precio: precio
+                });
+                actualizarListaProductos();
+                document.getElementById('nuevoPrecio').value = '';
+            }
+        });
+
+        document.getElementById('reiniciarCarrito').addEventListener('click', () => {
+            carrito = [
+                { nombre: "Producto 1", precio: 100 },
+                { nombre: "Producto 2", precio: 200 },
+                { nombre: "Producto 3", precio: 300 }
+            ];
+            actualizarListaProductos();
+            document.getElementById('outputDescuentos').innerHTML = 'Carrito reiniciado. Presiona "Calcular Descuentos" para generar un nuevo reporte.';
+        });
+
+        // Inicializar
+        actualizarListaProductos();
     </script>
 </body>
+
 </html>
