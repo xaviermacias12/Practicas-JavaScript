@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Arreglos y Objetos en JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .exercise {
+            margin-bottom: 50px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .exercise h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4b6cb7;
+        }
+        
+        .exercise p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .code-container {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .code-header h3 {
+            color: #ffffff;
+        }
+        
+        pre {
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+        
+        .comment {
+            color: #7f8c8d;
+        }
+        
+        .method {
+            color: #e74c3c;
+        }
+        
+        .string {
+            color: #2ecc71;
+        }
+        
+        button {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .demo-area {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4b6cb7;
+        }
+        
+        .result-area {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .result-area h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .output {
+            background-color: #f1f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        
+        .console-message {
+            color: #2c3e50;
+            margin: 5px 0;
+            padding: 5px;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .element-info {
+            color: #3498db;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        
+        input, select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ejercicios de Arreglos y Objetos en JavaScript</h1>
+        </header>
+        
+        <div class="content">
+            <!-- Ejercicio 1: -->
+            <section class="exercise">
+                <h2>Ejercicio 1: Iteración sobre Arreglos</h2>
+                <p> Una técnica fundamental en el manejo de arreglos es la iteración. Veamos un ejemplo usando un bucle for:</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code><span class="comment">// Iteración con bucle for</span>
+const frutas = ["manzana", "banana", "naranja", "uva"];
+for (let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i]);
+}</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <button id="runExercise1">Ejecutar Iteración</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola del navegador):</h4>
+                    <div class="output" id="output1">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+            
+            <!-- Ejercicio 2: -->
+            <section class="exercise">
+                <h2>Ejercicio 2: Métodos de Arreglos</h2>
+                <p>Uso de map, filter y reduce para manipular arreglos. Los resultados también se mostrarán en la consola.</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code><span class="comment">//  El método map crea un nuevo arreglo con los resultados de llamar a una función para cada elemento. Por ejemplo:</span>
+const numeros = [1, 2, 3, 4, 5];
+const numerosDuplicados = numeros.map(num => num * 2);
+console.log(numerosDuplicados); // [2, 4, 6, 8, 10]
+
+
+<span class="comment">//  Filter crea un nuevo arreglo con todos los elementos que pasan la prueba implementada por la función proporcionada:</span>
+const numerosFiltrados = numeros.filter(num => num > 2);
+console.log(numerosFiltrados); // [3, 4, 5]
+
+
+<span class="comment">//  Reduce ejecuta una función reductora sobre cada elemento de un array, devolviendo como resultado un único valor:</span>
+const suma = numeros.reduce((total, num) => total + num, 0);
+console.log(suma); // 15
+</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <button id="runExercise2map">Ejecutar Map</button>
+                    <button id="runExercise2filter">Ejecutar Filter</button>
+                    <button id="runExercise2reduce">Ejecutar Reduce</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola):</h4>
+                    <div class="output" id="output2">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+            
+            <!-- Ejercicio 3: Encontrar el Mayor Número -->
+            <section class="exercise">
+                <h2>Ejercicio 3: Encontrar el Mayor Número</h2>
+                <p> Veamos un ejercicio resuelto para encontrar el mayor número en un arreglo:</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>function encontrarMayor(arr) {
+    return arr.reduce((max, num) => (num > max ? num : max), arr[0]);
+} 
+    const numeros = [10, 5, 8, 20, 15];
+    console.log(encontrarMayor(numeros)); // 20</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <input type="text" id="arrayInput3" placeholder="Array (ej: 10,5,8,20,15)" value="10,5,8,20,15">
+                    <button id="runExercise3">Encontrar Mayor</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola):</h4>
+                    <div class="output" id="output3">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+            
+            <!-- Ejercicio 4: -->
+            <section class="exercise">
+                <h2>Ejercicio 4: Creación y Acceso a Propiedades de Objetos</h2>
+                <p> Los objetos en JavaScript son estructuras que permiten almacenar datos en pares clave-valor. Veamos un ejemplo:</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code><span class="comment">// Creación de objeto</span>
+const persona = {nombre:"Juan", edad: 30,ciudad:"Madrid"};
+console.log(persona.nombre);
+// Juan
+console.log(persona["edad"]);
+// 30</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <button id="runExercise4punto">Ejecutar Notación</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola):</h4>
+                    <div class="output" id="output4">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+            
+            <!-- Ejercicio 5: Iteración sobre Propiedades de Objetos -->
+            <section class="exercise">
+                <h2>Ejercicio 5: Iteración sobre Objetos</h2>
+                <p>Recorrer las propiedades de un objeto usando for...in. Los resultados también se mostrarán en la consola.</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>const libro = {
+    titulo: "El principito",
+    autor: "Antoine de Saint-Exupéry",
+    año: 1943
+};
+console.log("Objeto libro:", libro);
+
+for (let propiedad in libro) {
+    console.log(`${propiedad}: ${libro[propiedad]}`);
+}</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <button id="runExercise5">Iterar sobre Objeto</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola):</h4>
+                    <div class="output" id="output5">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+            
+            <!-- Ejercicio 6: Contar Propiedades de un Objeto -->
+            <section class="exercise">
+                <h2>Ejercicio 6: Contar Propiedades de un Objeto</h2>
+                <p>Función que cuenta las propiedades de un objeto. Los resultados también se mostrarán en la consola.</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>function contarPropiedades(obj) {
+    const cantidad = Object.keys(obj).length;
+    console.log("Cantidad de propiedades:", cantidad);
+    return cantidad;
+}
+
+const coche = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    año: 2020
+};
+console.log("Objeto coche:", coche);
+console.log(contarPropiedades(coche)); // 3</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <button id="runExercise6">Contar Propiedades</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola):</h4>
+                    <div class="output" id="output6">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+            
+            <!-- Ejercicio 7: Transformación de Arreglos de Objetos -->
+            <section class="exercise">
+                <h2>Ejercicio 7: Transformación de Arreglos de Objetos</h2>
+                <p>Extraer una propiedad específica de un arreglo de objetos usando map. Los resultados también se mostrarán en la consola.</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>const usuarios = [
+    { nombre: "Ana", edad: 25 },
+    { nombre: "Luis", edad: 30 },
+    { nombre: "María", edad: 28 }
+];
+console.log("Array de usuarios:", usuarios);
+
+function obtenerNombres(arr) {
+    const nombres = arr.map(usuario => usuario.nombre);
+    console.log("Nombres extraídos:", nombres);
+    return nombres;
+}
+
+console.log(obtenerNombres(usuarios)); // ["Ana", "Luis", "María"]</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <button id="runExercise7">Obtener Nombres</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola):</h4>
+                    <div class="output" id="output7">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+            
+            <!-- Ejercicio 8: Filtrado de Arreglos de Objetos -->
+            <section class="exercise">
+                <h2>Ejercicio 8: Filtrado de Arreglos de Objetos</h2>
+                <p>Filtrar un arreglo de objetos basado en una condición. Los resultados también se mostrarán en la consola.</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>function filtrarUsuarios(arr) {
+    const usuariosFiltrados = arr.filter(usuario => usuario.edad > 27);
+    console.log("Usuarios filtrados:", usuariosFiltrados);
+    return usuariosFiltrados;
+}
+
+console.log(filtrarUsuarios(usuarios));
+// [{ nombre: "Luis", edad: 30 }, { nombre: "María", edad: 28 }]</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <button id="runExercise8">Filtrar Usuarios</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola):</h4>
+                    <div class="output" id="output8">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+            
+            <!-- Ejercicio 9: Agrupación por Propiedad -->
+            <section class="exercise">
+                <h2>Ejercicio 9: Agrupación por Propiedad</h2>
+                <p>Agrupar objetos por una propiedad específica usando reduce. Los resultados también se mostrarán en la consola.</p>
+                
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>function agruparPorCategoria(arr) {
+    const agrupado = arr.reduce((grupo, producto) => {
+        const categoria = producto.categoria;
+        if (!grupo[categoria]) {
+            grupo[categoria] = [];
+        }
+        grupo[categoria].push(producto);
+        return grupo;
+    }, {});
+    
+    console.log("Productos agrupados:", agrupado);
+    return agrupado;
+}
+
+const productos = [
+    { nombre: "camiseta", categoria: "ropa" },
+    { nombre: "pantalón", categoria: "ropa" },
+    { nombre: "zapatos", categoria: "calzado" },
+    { nombre: "sandalias", categoria: "calzado" }
+];
+console.log("Array de productos:", productos);
+console.log(agruparPorCategoria(productos));</code></pre>
+                </div>
+                
+                <div class="demo-area">
+                    <button id="runExercise9">Agrupar por Categoría</button>
+                </div>
+                
+                <div class="result-area">
+                    <h4>Resultados (también visibles en la consola):</h4>
+                    <div class="output" id="output9">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+        </footer>
+    </div>
+
+    <script>
+        // Ejercicio 1: Iteración sobre Arreglos (con salida en consola)
+        document.getElementById('runExercise1').addEventListener('click', () => {
+            const frutas = ["manzana", "banana", "naranja", "uva"];
+            let output = "Iteración con for:\n";
+            
+            for (let i = 0; i < frutas.length; i++) {
+                output += `${frutas[i]}\n`;
+                console.log(frutas[i]);
+            }
+            
+            document.getElementById('output1').innerHTML = output;
+        });
+
+        // Ejercicio 2: 
+        const numeros = [1, 2, 3, 4, 5];
+        
+        document.getElementById('runExercise2map').addEventListener('click', () => {
+            console.log("Array original:", numeros);
+            const numerosDobles = numeros.map(num => num * 2);
+            console.log("Array duplicado:", numerosDobles);
+            document.getElementById('output2').innerHTML = 
+                `Array original: [${numeros}]\nArray duplicado: [${numerosDobles}]`;
+        });
+        
+        document.getElementById('runExercise2filter').addEventListener('click', () => {
+            console.log("Array original:", numeros);
+            const numerosFiltrados = numeros.filter(num => num > 2);
+            console.log("Números > 2:", numerosFiltrados);
+            document.getElementById('output2').innerHTML = 
+                `Array original: [${numeros}]\nNúmeros > 2: [${numerosFiltrados}]`;
+        });
+        
+        document.getElementById('runExercise2reduce').addEventListener('click', () => {
+            console.log("Array original:", numeros);
+            const suma = numeros.reduce((total, num) => total + num, 0);
+            console.log("Suma de todos los elementos:", suma);
+            document.getElementById('output2').innerHTML = 
+                `Array: [${numeros}]\nSuma de todos los elementos: ${suma}`;
+        });
+
+        // Ejercicio 3:
+        document.getElementById('runExercise3').addEventListener('click', () => {
+            
+            function encontrarMayor(arr) {
+                const mayor = arr.reduce((max, num) => (num > max ? num : max), arr[0]);
+                console.log("El número mayor es:", mayor);
+                return mayor;
+            }
+            
+            const arrayInput = document.getElementById('arrayInput3').value;
+            const array = arrayInput.split(',').map(num => parseInt(num.trim()) || 0);
+            console.log("Array:", array);
+            
+            const mayor = encontrarMayor(array);
+            
+            document.getElementById('output3').innerHTML = 
+                `Array: [${array}]\nEl número mayor es: ${mayor}`;
+        });
+
+        // Ejercicio 4: 
+        const persona = {
+            nombre: "Juan",
+            edad: 30,
+            ciudad: "Madrid"
+        };
+        
+        document.getElementById('runExercise4punto').addEventListener('click', () => {
+            console.log("Objeto persona:", persona);
+            console.log("Notación punto - nombre:", persona.nombre);
+            console.log("Notación punto - edad:", persona.edad);
+            console.log("Notación punto - ciudad:", persona.ciudad);
+            
+            document.getElementById('output4').innerHTML = 
+                `Mismos resultados tanto notación punto y corchetes :\nNombre: ${persona.nombre}\nEdad: ${persona.edad}\nCiudad: ${persona.ciudad}`;
+        });
+        
+
+        // Ejercicio 5: Iteración sobre Objetos
+        document.getElementById('runExercise5').addEventListener('click', () => {
+            console.log("=== EJERCICIO 5: Iteración sobre Objetos ===");
+            
+            const libro = {
+                titulo: "El principito",
+                autor: "Antoine de Saint-Exupéry",
+                año: 1943
+            };
+            
+            console.log("Objeto libro:", libro);
+            
+            let output = "";
+            for (let propiedad in libro) {
+                output += `${propiedad}: ${libro[propiedad]}\n`;
+                console.log(`${propiedad}: ${libro[propiedad]}`);
+            }
+            
+            document.getElementById('output5').innerHTML = output;
+            console.log("=== FIN DEL EJERCICIO 5 ===");
+        });
+
+        // Ejercicio 6: Contar Propiedades de un Objeto
+        document.getElementById('runExercise6').addEventListener('click', () => {
+            console.log("=== EJERCICIO 6: Contar Propiedades de un Objeto ===");
+            
+            function contarPropiedades(obj) {
+                const cantidad = Object.keys(obj).length;
+                console.log("Cantidad de propiedades:", cantidad);
+                return cantidad;
+            }
+            
+            const coche = {
+                marca: "Toyota",
+                modelo: "Corolla",
+                año: 2020
+            };
+            
+            console.log("Objeto coche:", coche);
+            const cantidad = contarPropiedades(coche);
+            
+            document.getElementById('output6').innerHTML = 
+                `Objeto: ${JSON.stringify(coche, null, 2)}\nNúmero de propiedades: ${cantidad}`;
+            console.log("=== FIN DEL EJERCICIO 6 ===");
+        });
+
+        // Ejercicio 7: Transformación de Arreglos de Objetos
+        document.getElementById('runExercise7').addEventListener('click', () => {
+            console.log("=== EJERCICIO 7: Transformación de Arreglos de Objetos ===");
+            
+            const usuarios = [
+                { nombre: "Ana", edad: 25 },
+                { nombre: "Luis", edad: 30 },
+                { nombre: "María", edad: 28 }
+            ];
+            
+            console.log("Array de usuarios:", usuarios);
+            
+            function obtenerNombres(arr) {
+                const nombres = arr.map(usuario => usuario.nombre);
+                console.log("Nombres extraídos:", nombres);
+                return nombres;
+            }
+            
+            const nombres = obtenerNombres(usuarios);
+            
+            document.getElementById('output7').innerHTML = 
+                `Usuarios: ${JSON.stringify(usuarios, null, 2)}\nNombres: [${nombres.join(", ")}]`;
+            console.log("=== FIN DEL EJERCICIO 7 ===");
+        });
+
+        // Ejercicio 8: Filtrado de Arreglos de Objetos
+        document.getElementById('runExercise8').addEventListener('click', () => {
+            console.log("=== EJERCICIO 8: Filtrado de Arreglos de Objetos ===");
+            
+            const usuarios = [
+                { nombre: "Ana", edad: 25 },
+                { nombre: "Luis", edad: 30 },
+                { nombre: "María", edad: 28 }
+            ];
+            
+            console.log("Array de usuarios:", usuarios);
+            
+            function filtrarUsuarios(arr) {
+                const usuariosFiltrados = arr.filter(usuario => usuario.edad > 27);
+                console.log("Usuarios filtrados (>27 años):", usuariosFiltrados);
+                return usuariosFiltrados;
+            }
+            
+            const usuariosFiltrados = filtrarUsuarios(usuarios);
+            
+            document.getElementById('output8').innerHTML = 
+                `Todos los usuarios: ${JSON.stringify(usuarios, null, 2)}\nUsuarios > 27 años: ${JSON.stringify(usuariosFiltrados, null, 2)}`;
+            console.log("=== FIN DEL EJERCICIO 8 ===");
+        });
+
+        // Ejercicio 9: Agrupación por Propiedad
+        document.getElementById('runExercise9').addEventListener('click', () => {
+            console.log("=== EJERCICIO 9: Agrupación por Propiedad ===");
+            
+            const productos = [
+                { nombre: "camiseta", categoria: "ropa" },
+                { nombre: "pantalón", categoria: "ropa" },
+                { nombre: "zapatos", categoria: "calzado" },
+                { nombre: "sandalias", categoria: "calzado" }
+            ];
+            
+            console.log("Array de productos:", productos);
+            
+            function agruparPorCategoria(arr) {
+                const agrupado = arr.reduce((grupo, producto) => {
+                    const categoria = producto.categoria;
+                    if (!grupo[categoria]) {
+                        grupo[categoria] = [];
+                    }
+                    grupo[categoria].push(producto);
+                    return grupo;
+                }, {});
+                
+                console.log("Productos agrupados:", agrupado);
+                return agrupado;
+            }
+            
+            const productosAgrupados = agruparPorCategoria(productos);
+            
+            document.getElementById('output9').innerHTML = 
+                `Productos: ${JSON.stringify(productos, null, 2)}\nAgrupados por categoría: ${JSON.stringify(productosAgrupados, null, 2)}`;
+            console.log("=== FIN DEL EJERCICIO 9 ===");
+        });
+    </script>
+</body>
+</html>
