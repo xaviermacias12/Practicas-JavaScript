@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de POO en JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .exercise {
+            margin-bottom: 50px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .exercise h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4b6cb7;
+        }
+
+        .exercise p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .code-container {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .code-header h3 {
+            color: #ffffff;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+
+        .comment {
+            color: #7f8c8d;
+        }
+
+        .method {
+            color: #e74c3c;
+        }
+
+        .string {
+            color: #2ecc71;
+        }
+
+        button {
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .demo-area {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4b6cb7;
+        }
+
+        .result-area {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+        }
+
+        .result-area h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .output {
+            background-color: #f1f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .console-message {
+            color: #2c3e50;
+            margin: 5px 0;
+            padding: 5px;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .element-info {
+            color: #3498db;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        .user-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .loading {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>6. Programación Orientada a Objetos (POO)</h1>
+        </header>
+
+        <div class="content">
+            <!-- Ejercicio 1: -->
+            <section class="exercise">
+                <h2>Ejercicio 1: Clases y Objetos</h2>
+                <p>Este ejercicio muestra cómo definir una clase y crear objetos (instancias) de esa clase.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>// Definición de una clase
+class Animal {
+    constructor(nombre, sonido) {
+        this.nombre = nombre;
+        this.sonido = sonido;
+    }
+
+    hacerSonido() {
+        return `${this.nombre} hace ${this.sonido}`;
+    }
+}
+
+// Creación de un objeto (instancia de la clase Animal)
+const perro = new Animal('Perro', 'guau');
+console.log(perro.hacerSonido()); // Perro hace guau</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <h3>Crear un animal:</h3>
+                    <input type="text" id="animalNombre" placeholder="Nombre del animal" value="Perro">
+                    <input type="text" id="animalSonido" placeholder="Sonido del animal" value="guau">
+                    <button id="runExercise1">Crear Animal</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados:</h4>
+                    <div class="output" id="output1">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 2: Herencia -->
+            <section class="exercise">
+                <h2>Ejercicio 2: Herencia</h2>
+                <p>Este ejercicio muestra cómo crear una subclase que hereda de una clase base.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>// Clase base
+class Animal {
+    constructor(nombre, sonido) {
+        this.nombre = nombre;
+        this.sonido = sonido;
+    }
+
+    hacerSonido() {
+        return `${this.nombre} hace ${this.sonido}`;
+    }
+}
+
+// Clase derivada (subclase)
+class Perro extends Animal {
+    constructor(nombre, raza) {
+        super(nombre, 'guau'); // Llama al constructor de la clase base
+        this.raza = raza;
+    }
+
+    mostrarRaza() {
+        return `${this.nombre} es un ${this.raza}`;
+    }
+}
+
+// Creación de un objeto (instancia de la clase Perro)
+const miPerro = new Perro("Max", "Labrador");
+console.log(miPerro.hacerSonido()); // Max hace guau
+console.log(miPerro.mostrarRaza()); // Max es un Labrador</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <h3>Crear un perro:</h3>
+                    <input type="text" id="perroNombre" placeholder="Nombre del perro" value="Max">
+                    <input type="text" id="perroRaza" placeholder="Raza del perro" value="Labrador">
+                    <button id="runExercise2">Crear Perro</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados:</h4>
+                    <div class="output" id="output2">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 3: Polimorfismo -->
+            <section class="exercise">
+                <h2>Ejercicio 3: Polimorfismo</h2>
+                <p>Este ejercicio muestra cómo el polimorfismo permite que diferentes clases se traten de manera uniforme.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript</h3>
+                    </div>
+                    <pre><code>class Animal {
+    constructor(nombre, sonido) {
+        this.nombre = nombre;
+        this.sonido = sonido;
+    }
+
+    hacerSonido() {
+        return `${this.nombre} hace ${this.sonido}`;
+    }
+}
+
+class Perro extends Animal {
+    constructor(nombre, raza) {
+        super(nombre, 'guau');
+        this.raza = raza;
+    }
+
+    hacerSonido() {
+        return `${this.nombre} ladra: ${this.sonido}`;
+    }
+}
+
+class Gato extends Animal {
+    constructor(nombre) {
+        super(nombre, 'miau');
+    }
+
+    hacerSonido() {
+        return `${this.nombre} maúlla: ${this.sonido}`;
+    }
+}
+
+const animales = [new Perro('Max', 'Labrador'), new Gato('Luna')];
+
+// Recolectar los sonidos
+let salida = "";
+animales.forEach(animal => {
+    salida += animal.hacerSonido() + '\n';
+});
+
+console.log(salida);
+// Max ladra: guau
+// Luna maúlla: miau</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <button id="runExercise3">Ejecutar Polimorfismo</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados:</h4>
+                    <div class="output" id="output3">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+
+            <!-- Ejercicio 4: Ejercicio Vehículo -->
+            <section class="exercise">
+                <h2>Ejercicio 4: Ejercicio Vehículo</h2>
+                <p>Este ejercicio implementa el ejercicio de vehículos propuesto en el PDF, con un método adicional para cada tipo de vehículo.</p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Clase Base Vehículo</h3>
+                    </div>
+                    <pre><code>// Clase base Vehículo
+class Vehiculo {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    mostrarInfo() {
+        return `Vehículo: ${this.marca} ${this.modelo}`;
+    }
+    
+    // MÉTODO ADICIONAL: Obtener año de fabricación estimado
+    obtenerAñoEstimado() {
+        const años = [2019, 2020, 2021, 2022, 2023];
+        const año = años[Math.floor(Math.random() * años.length)];
+        return `Año de fabricación estimado: ${año}`;
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Subclase Coche</h3>
+                    </div>
+                    <pre><code>// Subclase Coche que hereda de Vehículo
+class Coche extends Vehiculo {
+    constructor(marca, modelo, puertas) {
+        super(marca, modelo);
+        this.puertas = puertas;
+    }
+
+    mostrarPuertas() {
+        return `Este coche tiene ${this.puertas} puertas`;
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Subclase Moto</h3>
+                    </div>
+                    <pre><code>// Subclase Moto que hereda de Vehículo
+class Moto extends Vehiculo {
+    constructor(marca, modelo, cilindrada) {
+        super(marca, modelo);
+        this.cilindrada = cilindrada;
+    }
+
+    mostrarCilindrada() {
+        return `Esta moto tiene una cilindrada de ${this.cilindrada}cc`;
+    }
+}</code></pre>
+                </div>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <h3>Código JavaScript - Subclase Camion</h3>
+                    </div>
+                    <pre><code>// Subclase Camion que hereda de Vehículo
+class Camion extends Vehiculo {
+    constructor(marca, modelo, capacidadCarga) {
+        super(marca, modelo);
+        this.capacidadCarga = capacidadCarga;
+    }
+    mostrarCapacidad() {
+        return `Este camión puede cargar ${this.capacidadCarga} toneladas`;
+    }
+}</code></pre>
+                </div>
+
+                <div class="demo-area">
+                    <h3>Crear vehículos:</h3>
+                    <select id="tipoVehiculo">
+                        <option value="coche">Coche</option>
+                        <option value="moto">Moto</option>
+                        <option value="camion">Camión</option>
+                    </select>
+                    <input type="text" id="vehiculoMarca" placeholder="Marca" value="Toyota">
+                    <input type="text" id="vehiculoModelo" placeholder="Modelo" value="Corolla">
+                    <input type="text" id="vehiculoExtra" placeholder="Puertas/Cilindrada/Capacidad" value="4">
+                    <button id="runExercise4">Crear Vehículo</button>
+                </div>
+
+                <div class="result-area">
+                    <h4>Resultados:</h4>
+                    <div class="output" id="output4">Los resultados aparecerán aquí...</div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+        </footer>
+    </div>
+
+    <script>
+        // Ejercicio 1:
+        document.getElementById('runExercise1').addEventListener('click', () => {
+            const nombre = document.getElementById('animalNombre').value || 'Animal';
+            const sonido = document.getElementById('animalSonido').value || 'sonido';
+            
+            // Definición de la clase Animal
+            class Animal {
+                constructor(nombre, sonido) {
+                    this.nombre = nombre;
+                    this.sonido = sonido;
+                }
+
+                hacerSonido() {
+                    return `${this.nombre} hace ${this.sonido}`;
+                }
+            }
+
+            // Creación de un objeto
+            const animal = new Animal(nombre, sonido);
+            
+            const outputElement = document.getElementById('output1');
+            outputElement.innerHTML = animal.hacerSonido();
+            
+            console.log(animal.hacerSonido());
+        });
+
+        // Ejercicio 2:
+        document.getElementById('runExercise2').addEventListener('click', () => {
+            const nombre = document.getElementById('perroNombre').value || 'Perro';
+            const raza = document.getElementById('perroRaza').value || 'Raza';
+            
+            // Clase base
+            class Animal {
+                constructor(nombre, sonido) {
+                    this.nombre = nombre;
+                    this.sonido = sonido;
+                }
+
+                hacerSonido() {
+                    return `${this.nombre} hace ${this.sonido}`;
+                }
+            }
+
+            // Clase derivada (subclase)
+            class Perro extends Animal {
+                constructor(nombre, raza) {
+                    super(nombre, 'guau');
+                    this.raza = raza;
+                }
+
+                mostrarRaza() {
+                    return `${this.nombre} es un ${this.raza}`;
+                }
+            }
+
+            // Creación de un objeto
+            const miPerro = new Perro(nombre, raza);
+            
+            const outputElement = document.getElementById('output2');
+            outputElement.innerHTML = `${miPerro.hacerSonido()}\n${miPerro.mostrarRaza()}`;
+            
+            console.log(miPerro.hacerSonido());
+            console.log(miPerro.mostrarRaza());
+        });
+
+        // Ejercicio 3:
+        document.getElementById('runExercise3').addEventListener('click', () => {
+            class Animal {
+                constructor(nombre, sonido) {
+                    this.nombre = nombre;
+                    this.sonido = sonido;
+                }
+
+                hacerSonido() {
+                    return `${this.nombre} hace ${this.sonido}`;
+                }
+            }
+
+            class Perro extends Animal {
+                constructor(nombre, raza) {
+                    super(nombre, 'guau');
+                    this.raza = raza;
+                }
+
+                hacerSonido() {
+                    return `${this.nombre} ladra: ${this.sonido}`;
+                }
+            }
+
+            class Gato extends Animal {
+                constructor(nombre) {
+                    super(nombre, 'miau');
+                }
+
+                hacerSonido() {
+                    return `${this.nombre} maúlla: ${this.sonido}`;
+                }
+            }
+
+            const animales = [new Perro('Max', 'Labrador'), new Gato('Luna')];
+            
+            // Recolectar los sonidos
+            let salida = "";
+            animales.forEach(animal => {
+                salida += animal.hacerSonido() + '\n';
+            });
+
+            const outputElement = document.getElementById('output3');
+            outputElement.innerHTML = salida;
+            
+            console.log(salida);
+        });
+
+        // Ejercicio 4:
+        document.getElementById('runExercise4').addEventListener('click', () => {
+            const tipo = document.getElementById('tipoVehiculo').value;
+            const marca = document.getElementById('vehiculoMarca').value || 'Marca';
+            const modelo = document.getElementById('vehiculoModelo').value || 'Modelo';
+            const extra = document.getElementById('vehiculoExtra').value || '0';
+            
+            // Clase base Vehículo
+            class Vehiculo {
+                constructor(marca, modelo) {
+                    this.marca = marca;
+                    this.modelo = modelo;
+                }
+
+                mostrarInfo() {
+                    return `Vehículo: ${this.marca} ${this.modelo}`;
+                }
+                
+                // MÉTODO ADICIONAL: Obtener año de fabricación estimado
+                obtenerAñoEstimado() {
+                    const años = [2019, 2020, 2021, 2022, 2023];
+                    const año = años[Math.floor(Math.random() * años.length)];
+                    return `Año de fabricación estimado: ${año}`;
+                }
+            }
+
+            // Subclase Coche que hereda de Vehículo
+            class Coche extends Vehiculo {
+                constructor(marca, modelo, puertas) {
+                    super(marca, modelo);
+                    this.puertas = puertas;
+                }
+
+                mostrarPuertas() {
+                    return `Este coche tiene ${this.puertas} puertas`;
+                }
+                
+                // MÉTODO ADICIONAL: Abrir maletero
+                abrirMaletero() {
+                    return `Maletero del ${this.marca} ${this.modelo} abierto`;
+                }
+            }
+
+            // Subclase Moto que hereda de Vehículo
+            class Moto extends Vehiculo {
+                constructor(marca, modelo, cilindrada) {
+                    super(marca, modelo);
+                    this.cilindrada = cilindrada;
+                }
+
+                mostrarCilindrada() {
+                    return `Esta moto tiene una cilindrada de ${this.cilindrada}cc`;
+                }
+            }
+
+            // Subclase Camion que hereda de Vehículo
+            class Camion extends Vehiculo {
+                constructor(marca, modelo, capacidadCarga) {
+                    super(marca, modelo);
+                    this.capacidadCarga = capacidadCarga;
+                }
+
+                mostrarCapacidad() {
+                    return `Este camión puede cargar ${this.capacidadCarga} toneladas`;
+                }
+                
+            }
+
+            let vehiculo;
+            let resultado = "";
+
+            switch(tipo) {
+                case 'coche':
+                    vehiculo = new Coche(marca, modelo, extra);
+                    resultado += vehiculo.mostrarInfo() + '\n';
+                    resultado += vehiculo.mostrarPuertas() + '\n';
+                    resultado += vehiculo.obtenerAñoEstimado() + '\n';
+                    break;
+                case 'moto':
+                    vehiculo = new Moto(marca, modelo, extra);
+                    resultado += vehiculo.mostrarInfo() + '\n';
+                    resultado += vehiculo.mostrarCilindrada() + '\n';
+                    resultado += vehiculo.obtenerAñoEstimado() + '\n';
+                    break;
+                case 'camion':
+                    vehiculo = new Camion(marca, modelo, extra);
+                    resultado += vehiculo.mostrarInfo() + '\n';
+                    resultado += vehiculo.mostrarCapacidad() + '\n';
+                    resultado += vehiculo.obtenerAñoEstimado() + '\n';
+                    break;
+            }
+
+            const outputElement = document.getElementById('output4');
+            outputElement.innerHTML = resultado;
+            
+            console.log(resultado);
+        });
+    </script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,14 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: #333;
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -27,35 +28,35 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             overflow: hidden;
         }
-        
+
         header {
             background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
             color: white;
             padding: 30px;
             text-align: center;
         }
-        
+
         h1 {
             font-size: 2.8rem;
             margin-bottom: 10px;
         }
-        
+
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
         }
-        
+
         .content {
             padding: 30px;
         }
-        
+
         .exercises-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
-        
+
         .exercise-card {
             background: white;
             border-radius: 10px;
@@ -64,29 +65,29 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border: 1px solid #eaeaea;
         }
-        
+
         .exercise-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
         .exercise-header {
             background: linear-gradient(90deg, #3498db 0%, #2c3e50 100%);
             color: white;
             padding: 20px;
             text-align: center;
         }
-        
+
         .exercise-content {
             padding: 20px;
         }
-        
+
         .exercise-content p {
             margin-bottom: 20px;
             line-height: 1.5;
             padding-bottom: 10px;
         }
-        
+
         .exercise-link {
             display: block;
             text-align: center;
@@ -98,11 +99,11 @@
             font-weight: 600;
             transition: background 0.3s;
         }
-        
+
         .exercise-link:hover {
             background: linear-gradient(90deg, #182848 0%, #4b6cb7 100%);
         }
-        
+
         footer {
             text-align: center;
             padding: 20px;
@@ -110,26 +111,28 @@
             color: #6c757d;
             border-top: 1px solid #eaeaea;
         }
-        
+
         @media (max-width: 768px) {
             .exercises-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             h1 {
                 font-size: 2.2rem;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <h1>Ejercicios de Práctica</h1>
-            <p class="subtitle">Programación de dispositivos móviles. - Reporte de practicas JavaScript. - Luis Xavier Macias Flores</p>
+            <p class="subtitle">Programación de dispositivos móviles. - Reporte de practicas JavaScript. - Luis Xavier
+                Macias Flores</p>
         </header>
-        
-        <div class="content">            
+
+        <div class="content">
             <div class="exercises-grid">
                 <div class="exercise-card">
                     <div class="exercise-header">
@@ -140,7 +143,7 @@
                         <a href="doms.html" class="exercise-link">Ver Ejercicios</a>
                     </div>
                 </div>
-                
+
                 <div class="exercise-card">
                     <div class="exercise-header">
                         <h2>2. Ejercicios de Funciones con JavaScript</h2>
@@ -150,7 +153,7 @@
                         <a href="funciones.html" class="exercise-link">Ver Ejercicios</a>
                     </div>
                 </div>
-                
+
                 <div class="exercise-card">
                     <div class="exercise-header">
                         <h2>3. Manejo de Arreglos y Objetos con JavaScript</h2>
@@ -160,42 +163,43 @@
                         <a href="manejo.html" class="exercise-link">Ver Ejercicios</a>
                     </div>
                 </div>
-                
+
                 <div class="exercise-card">
                     <div class="exercise-header">
                         <h2>4. Ejercicios de Promesas y Asincronía con JavaScript</h2>
                     </div>
                     <div class="exercise-content">
                         <p>Ejercicios de Promesas y Asincronía con JavaScript.</p>
-                        <a href="promesas.html" class="exercise-link">Ver Ejercicio</a>
+                        <a href="promesas.html" class="exercise-link">Ver Ejercicios</a>
                     </div>
                 </div>
-                
+
                 <div class="exercise-card">
                     <div class="exercise-header">
                         <h2>5. Ejercicios de Modulos con JavaScript</h2>
                     </div>
                     <div class="exercise-content">
                         <p>Serie de ejercicios de Modulos con JavaScript.</p>
-                        <a href="#" class="exercise-link">Ver Ejercicio</a>
+                        <a href="/miProyecto/index.html" class="exercise-link">Ver Ejercicios</a>
                     </div>
                 </div>
-                
+
                 <div class="exercise-card">
                     <div class="exercise-header">
                         <h2>6. Programación Orientada a Objetos (POO)</h2>
                     </div>
                     <div class="exercise-content">
                         <p>Serie de ejercicios de Programación Orientada a Objetos (POO).</p>
-                        <a href="#" class="exercise-link">Ver Ejercicio</a>
+                        <a href="poo.html" class="exercise-link">Ver Ejercicios</a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <footer>
             <p> Programación de dispositivos móviles. - Reporte de practicas JavaScript. - Luis Xavier Macias Flores</p>
         </footer>
     </div>
 </body>
+
 </html>
