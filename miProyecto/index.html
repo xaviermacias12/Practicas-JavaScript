@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios de Módulos en JavaScript</title>
+    <title>5. Ejercicios de Modulos con JavaScript</title>
     <style>
         * {
             margin: 0;
@@ -209,7 +209,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>5. Ejercicios de Módulos en JavaScript</h1>
+            <h1>5. Ejercicios de Módulos con JavaScript</h1>
         </header>
 
         <div class="content">
@@ -370,7 +370,7 @@ console.log(invertir(texto)); // "odnuM aloH"</code></pre>
                 </div>
             </section>
 
-            <!-- Ejercicio 4: Ejercicio Propuesto -->
+            <!-- Ejercicio 4: -->
             <section class="exercise">
                 <h2>Ejercicio Personal: Módulo para funciones de fecha y hora.</h2>
                 <p>Un módulo para funciones de fecha y hora.</p>
@@ -408,13 +408,11 @@ export const diaSemana = () => new Date().toLocaleString('es-ES', { weekday: 'lo
             outputElement.innerHTML = "Ejecutando proyecto completo...";
             
             try {
-                // Importar todos los módulos
                 const { saludo } = await import('./saludo.js');
                 const { despedida } = await import('./despedida.js');
                 const mensajeModule = await import('./mensaje.js');
                 const mensaje = mensajeModule.default;
                 
-                // Usar las funciones importadas
                 let resultado = "";
                 resultado += `${saludo()}\n`;
                 resultado += `${despedida()}\n`;
@@ -422,7 +420,6 @@ export const diaSemana = () => new Date().toLocaleString('es-ES', { weekday: 'lo
                 
                 outputElement.innerHTML = resultado;
                 
-                // También mostrar en consola
                 console.log(saludo());
                 console.log(despedida());
                 console.log(mensaje);
@@ -438,7 +435,6 @@ export const diaSemana = () => new Date().toLocaleString('es-ES', { weekday: 'lo
             const numB = parseInt(document.getElementById('numB').value) || 0;
             const operation = document.getElementById('operation').value;
             
-            // Importar módulo matemático dinámicamente
             const math = await import('./math.js');
             
             let resultado;
@@ -468,7 +464,6 @@ export const diaSemana = () => new Date().toLocaleString('es-ES', { weekday: 'lo
             const texto = document.getElementById('textInput').value || '';
             const operation = document.getElementById('stringOperation').value;
             
-            // Importar módulo de strings dinámicamente
             const strings = await import('./strings.js');
             
             let resultado;
@@ -499,12 +494,10 @@ export const diaSemana = () => new Date().toLocaleString('es-ES', { weekday: 'lo
             outputElement.innerHTML = "Ejecutar módulo";
             
             try {
-                // Simular módulos de fecha y validación
                 const fechaActual = () => new Date().toLocaleDateString();
                 const horaActual = () => new Date().toLocaleTimeString();
                 const diaSemana = () => new Date().toLocaleString('es-ES', { weekday: 'long' });
                 
-                // Probar las funciones
                 let resultado = "";
                 resultado += `Fecha actual: ${fechaActual()}\n`;
                 resultado += `Hora actual: ${horaActual()}\n`;
@@ -512,7 +505,6 @@ export const diaSemana = () => new Date().toLocaleString('es-ES', { weekday: 'lo
                 
                 outputElement.innerHTML = resultado;
                 
-                // También mostrar en consola
                 console.log(`Fecha actual: ${fechaActual()}`);
                 console.log(`Hora actual: ${horaActual()}`);
                 console.log(`Día de la semana: ${diaSemana()}`);
@@ -523,7 +515,6 @@ export const diaSemana = () => new Date().toLocaleString('es-ES', { weekday: 'lo
         });
     </script>
 
-    <!-- Módulos JavaScript -->
     <script type="module" src="./saludo.js"></script>
     <script type="module" src="./despedida.js"></script>
     <script type="module" src="./mensaje.js"></script>

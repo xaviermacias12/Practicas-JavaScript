@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios de Manipulación del DOM</title>
+    <title>1. Manipulación del DOM con JavaScript</title>
     <style>
         * {
             margin: 0;
@@ -437,31 +437,26 @@ listItems.forEach(item => {
             const output = document.getElementById('output1');
             output.innerHTML = '';
 
-            // Seleccionar un elemento por ID
             const myDiv = document.getElementById('myDiv');
             console.log("myDiv:");
             console.log(myDiv);
             output.innerHTML += `<div class="console-message">myDiv: <span class="element-info">${myDiv.outerHTML}</span></div>`;
 
-            // Seleccionar elementos por clase
             const elementsByClass = document.getElementsByClassName('myClass');
             console.log("elementsByClass:");
             console.log(elementsByClass);
             output.innerHTML += `<div class="console-message">elementsByClass: <span class="element-info">HTMLCollection con ${elementsByClass.length} elemento(s)</span></div>`;
 
-            // Seleccionar elementos por etiqueta
             const elementsByTag = document.getElementsByTagName('div');
             console.log("elementsByTag:");
             console.log(elementsByTag);
             output.innerHTML += `<div class="console-message">elementsByTag: <span class="element-info">HTMLCollection con ${elementsByTag.length} elemento(s)</span></div>`;
 
-            // Seleccionar un elemento con querySelector
             const queryElement = document.querySelector('#myDiv');
             console.log("queryElement:");
             console.log(queryElement);
             output.innerHTML += `<div class="console-message">queryElement: <span class="element-info">${queryElement.outerHTML}</span></div>`;
 
-            // Seleccionar todos los elementos con querySelectorAll
             const queryAllElements = document.querySelectorAll('div');
             console.log("queryAllElements:");
             console.log(queryAllElements);

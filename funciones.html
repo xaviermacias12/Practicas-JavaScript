@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios de Funciones en JavaScript</title>
+    <title>2. Ejercicios de Funciones con JavaScript</title>
     <style>
         * {
             margin: 0;
@@ -1187,15 +1187,12 @@ function calcularTotales(carritoProcesado, calculadora) {
         }
 
         // Ejercicio Final: 
-
-        // Datos iniciales
         let carrito = [
             { nombre: "Producto 1", precio: 100 },
             { nombre: "Producto 2", precio: 200 },
             { nombre: "Producto 3", precio: 300 }
         ];
 
-        // CLOSURE: Función que crea aplicadores de descuento personalizados
         function crearAplicadorDescuento(tipoCliente) {
             const descuentos = {
                 regular: 0.1,    // 10% descuento
@@ -1205,18 +1202,15 @@ function calcularTotales(carritoProcesado, calculadora) {
 
             const descuento = descuentos[tipoCliente] || 0;
 
-            // Retornamos una función que aplica el descuento (CLOSURE)
             return function (precioOriginal) {
                 return precioOriginal * (1 - descuento);
             };
         }
 
-        // FUNCIÓN DE ORDEN SUPERIOR: Aplica un procesamiento a cada producto
         function procesarCarrito(carrito, procesador) {
             return carrito.map(procesador);
         }
 
-        // Función que genera reportes de descuentos
         function generarReporte(carrito, clienteTipo) {
             const aplicarDescuento = crearAplicadorDescuento(clienteTipo);
             const procesarConDescuento = (producto) => ({
@@ -1226,11 +1220,9 @@ function calcularTotales(carritoProcesado, calculadora) {
                 ahorro: producto.precio - aplicarDescuento(producto.precio)
             });
 
-            // Usando función de orden superior
             return procesarCarrito(carrito, procesarConDescuento);
         }
 
-        // Función para calcular totales (otra función de orden superior)
         function calcularTotales(carritoProcesado) {
             const calculadora = (carrito) => ({
                 totalOriginal: carrito.reduce((sum, item) => sum + item.precioOriginal, 0),
@@ -1241,7 +1233,6 @@ function calcularTotales(carritoProcesado, calculadora) {
             return calculadora(carritoProcesado);
         }
 
-        // Actualizar la visualización del carrito
         function actualizarListaProductos() {
             const lista = document.getElementById('listaProductos');
             lista.innerHTML = '';
@@ -1253,7 +1244,6 @@ function calcularTotales(carritoProcesado, calculadora) {
                 lista.appendChild(div);
             });
 
-            // Reasignar event listeners a los botones
             document.querySelectorAll('.btn-quitar').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     const id = parseInt(e.target.getAttribute('data-id'));
@@ -1308,7 +1298,6 @@ function calcularTotales(carritoProcesado, calculadora) {
             document.getElementById('outputDescuentos').innerHTML = 'Carrito reiniciado. Presiona "Calcular Descuentos" para generar un nuevo reporte.';
         });
 
-        // Inicializar
         actualizarListaProductos();
     </script>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios de Promesas y Asincronía en JavaScript</title>
+    <title>4. Ejercicios de Promesas y Asincronía con JavaScript</title>
     <style>
         * {
             margin: 0;
@@ -215,7 +215,7 @@
         </header>
 
         <div class="content">
-            <!-- Ejercicio 1: Suma con Callback -->
+            <!-- Ejercicio 1: -->
             <section class="exercise">
                 <h2>Ejercicio 1: Suma de Dos Números con Callback</h2>
                 <p>Este es el primer ejemplo del PDF, que muestra cómo utilizar un callback para manejar el resultado de una operación.</p>
@@ -252,7 +252,7 @@ sumar(5, 10, mostrarResultado);</code></pre>
                 </div>
             </section>
 
-            <!-- Ejercicio 2: Callback con setTimeout -->
+            <!-- Ejercicio 2 -->
             <section class="exercise">
                 <h2>Ejercicio 2: Callback con setTimeout</h2>
                 <p>Este ejemplo muestra cómo usar un callback con una operación asíncrona simulada con setTimeout.</p>
@@ -289,7 +289,7 @@ obtenerDatos(mostrarDatos);</code></pre>
                 </div>
             </section>
 
-            <!-- Ejercicio 3: Promesas -->
+            <!-- Ejercicio 3: -->
             <section class="exercise">
                 <h2>Ejercicio 3: Estructura Básica de una Promesa</h2>
                 <p>Las promesas representan la finalización (o falla) de una operación asíncrona y su valor resultante.</p>
@@ -333,7 +333,7 @@ miPromesa
                 </div>
             </section>
 
-            <!-- Ejercicio 4: Fetch con Promesas -->
+            <!-- Ejercicio 4: -->
             <section class="exercise">
                 <h2>Ejercicio 4: Fetch API con Promesas</h2>
                 <p>Uso de fetch con then/catch para obtener datos de una API.</p>
@@ -376,7 +376,7 @@ obtenerPosts();</code></pre>
                 </div>
             </section>
 
-            <!-- Ejercicio 5: Async/Await -->
+            <!-- Ejercicio 5: -->
             <section class="exercise">
                 <h2>Ejercicio 5: Async/Await</h2>
                 <p>Uso de async/await para manejar operaciones asíncronas de forma más legible.</p>
@@ -425,7 +425,7 @@ obtenerPostsConAsyncAwait();</code></pre>
                 </div>
             </section>
 
-            <!-- Ejercicio 6: Usuarios desde API -->
+            <!-- Ejercicio 6: -->
             <section class="exercise">
                 <h2>Ejercicio 6: Mostrar Usuarios desde API</h2>
                 <p>Obtener usuarios desde una API y mostrarlos en la página (ejercicio final del PDF).</p>
@@ -469,7 +469,7 @@ obtenerUsuarios();</code></pre>
                 </div>
             </section>
 
-            <!-- Ejercicio 7: Async/Await para usuarios -->
+            <!-- Ejercicio 7: -->
             <section class="exercise">
                 <h2>Ejercicio 7: Async/Await para Usuarios</h2>
                 <p>Versión con async/await del ejercicio anterior.</p>
@@ -528,12 +528,11 @@ obtenerUsuariosAsync();</code></pre>
         </div>
 
         <footer>
-            <p>Ejercicios de Promesas y Asincronía - JavaScript</p>
         </footer>
     </div>
 
     <script>
-        // Ejercicio 1: Suma con Callback
+        // Ejercicio 1:
         document.getElementById('runExercise1').addEventListener('click', () => {
             const num1 = parseInt(document.getElementById('num1').value) || 0;
             const num2 = parseInt(document.getElementById('num2').value) || 0;
@@ -550,7 +549,7 @@ obtenerUsuariosAsync();</code></pre>
             sumar(num1, num2, mostrarResultado);
         });
 
-        // Ejercicio 2: Callback con setTimeout
+        // Ejercicio 2:
         document.getElementById('runExercise2').addEventListener('click', () => {
             const outputElement = document.getElementById('resultado-datos');
             outputElement.innerHTML = "Obteniendo datos... (espera 2 segundos)";
@@ -569,7 +568,7 @@ obtenerUsuariosAsync();</code></pre>
             obtenerDatos(mostrarDatos);
         });
 
-        // Ejercicio 3: Promesas
+        // Ejercicio 3:
         document.getElementById('runExercise3').addEventListener('click', () => {
             const outputElement = document.getElementById('output3');
             outputElement.innerHTML = "Ejecutando promesa...";
@@ -612,7 +611,7 @@ obtenerUsuariosAsync();</code></pre>
                 });
         });
 
-        // Ejercicio 4: Fetch con Promesas
+        // Ejercicio 4:
         document.getElementById('runExercise4').addEventListener('click', () => {
             const postsList = document.getElementById('postsList');
             postsList.innerHTML = "<p class='loading'>Cargando posts...</p>";
@@ -641,7 +640,7 @@ obtenerUsuariosAsync();</code></pre>
             obtenerPosts();
         });
 
-        // Ejercicio 5: Async/Await
+        // Ejercicio 5:
         document.getElementById('runExercise5').addEventListener('click', async () => {
             const postsList = document.getElementById('postsListAsync');
             postsList.innerHTML = "<p class='loading'>Cargando posts...</p>";
@@ -674,7 +673,7 @@ obtenerUsuariosAsync();</code></pre>
             await obtenerPostsConAsyncAwait();
         });
 
-        // Ejercicio 6: Usuarios desde API
+        // Ejercicio 6:
         document.getElementById('runExercise6').addEventListener('click', () => {
             const usersList = document.getElementById('usersList');
             usersList.innerHTML = "<p class='loading'>Cargando usuarios...</p>";
@@ -702,7 +701,7 @@ obtenerUsuariosAsync();</code></pre>
             obtenerUsuarios();
         });
 
-        // Ejercicio 7: Async/Await para usuarios
+        // Ejercicio 7:
         document.getElementById('runExercise7').addEventListener('click', async () => {
             const usersList = document.getElementById('usersListAsync');
             usersList.innerHTML = "<p class='loading'>Cargando usuarios...</p>";

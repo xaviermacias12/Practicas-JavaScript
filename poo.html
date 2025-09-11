@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicios de POO en JavaScript</title>
+    <title>6. Programación Orientada a Objetos (POO)</title>
     <style>
         * {
             margin: 0;
@@ -244,7 +244,7 @@ console.log(perro.hacerSonido()); // Perro hace guau</code></pre>
                 </div>
             </section>
 
-            <!-- Ejercicio 2: Herencia -->
+            <!-- Ejercicio 2: -->
             <section class="exercise">
                 <h2>Ejercicio 2: Herencia</h2>
                 <p>Este ejercicio muestra cómo crear una subclase que hereda de una clase base.</p>
@@ -296,7 +296,7 @@ console.log(miPerro.mostrarRaza()); // Max es un Labrador</code></pre>
                 </div>
             </section>
 
-            <!-- Ejercicio 3: Polimorfismo -->
+            <!-- Ejercicio 3: -->
             <section class="exercise">
                 <h2>Ejercicio 3: Polimorfismo</h2>
                 <p>Este ejercicio muestra cómo el polimorfismo permite que diferentes clases se traten de manera uniforme.</p>
@@ -360,7 +360,7 @@ console.log(salida);
                 </div>
             </section>
 
-            <!-- Ejercicio 4: Ejercicio Vehículo -->
+            <!-- Ejercicio 4: -->
             <section class="exercise">
                 <h2>Ejercicio 4: Ejercicio Vehículo</h2>
                 <p>Este ejercicio implementa el ejercicio de vehículos propuesto en el PDF, con un método adicional para cada tipo de vehículo.</p>
@@ -469,7 +469,6 @@ class Camion extends Vehiculo {
             const nombre = document.getElementById('animalNombre').value || 'Animal';
             const sonido = document.getElementById('animalSonido').value || 'sonido';
             
-            // Definición de la clase Animal
             class Animal {
                 constructor(nombre, sonido) {
                     this.nombre = nombre;
@@ -481,7 +480,6 @@ class Camion extends Vehiculo {
                 }
             }
 
-            // Creación de un objeto
             const animal = new Animal(nombre, sonido);
             
             const outputElement = document.getElementById('output1');
@@ -495,7 +493,6 @@ class Camion extends Vehiculo {
             const nombre = document.getElementById('perroNombre').value || 'Perro';
             const raza = document.getElementById('perroRaza').value || 'Raza';
             
-            // Clase base
             class Animal {
                 constructor(nombre, sonido) {
                     this.nombre = nombre;
@@ -507,7 +504,6 @@ class Camion extends Vehiculo {
                 }
             }
 
-            // Clase derivada (subclase)
             class Perro extends Animal {
                 constructor(nombre, raza) {
                     super(nombre, 'guau');
@@ -519,7 +515,6 @@ class Camion extends Vehiculo {
                 }
             }
 
-            // Creación de un objeto
             const miPerro = new Perro(nombre, raza);
             
             const outputElement = document.getElementById('output2');
@@ -565,7 +560,6 @@ class Camion extends Vehiculo {
 
             const animales = [new Perro('Max', 'Labrador'), new Gato('Luna')];
             
-            // Recolectar los sonidos
             let salida = "";
             animales.forEach(animal => {
                 salida += animal.hacerSonido() + '\n';
@@ -584,7 +578,6 @@ class Camion extends Vehiculo {
             const modelo = document.getElementById('vehiculoModelo').value || 'Modelo';
             const extra = document.getElementById('vehiculoExtra').value || '0';
             
-            // Clase base Vehículo
             class Vehiculo {
                 constructor(marca, modelo) {
                     this.marca = marca;
@@ -595,7 +588,6 @@ class Camion extends Vehiculo {
                     return `Vehículo: ${this.marca} ${this.modelo}`;
                 }
                 
-                // MÉTODO ADICIONAL: Obtener año de fabricación estimado
                 obtenerAñoEstimado() {
                     const años = [2019, 2020, 2021, 2022, 2023];
                     const año = años[Math.floor(Math.random() * años.length)];
@@ -603,7 +595,6 @@ class Camion extends Vehiculo {
                 }
             }
 
-            // Subclase Coche que hereda de Vehículo
             class Coche extends Vehiculo {
                 constructor(marca, modelo, puertas) {
                     super(marca, modelo);
@@ -614,13 +605,11 @@ class Camion extends Vehiculo {
                     return `Este coche tiene ${this.puertas} puertas`;
                 }
                 
-                // MÉTODO ADICIONAL: Abrir maletero
                 abrirMaletero() {
                     return `Maletero del ${this.marca} ${this.modelo} abierto`;
                 }
             }
 
-            // Subclase Moto que hereda de Vehículo
             class Moto extends Vehiculo {
                 constructor(marca, modelo, cilindrada) {
                     super(marca, modelo);
@@ -632,7 +621,6 @@ class Camion extends Vehiculo {
                 }
             }
 
-            // Subclase Camion que hereda de Vehículo
             class Camion extends Vehiculo {
                 constructor(marca, modelo, capacidadCarga) {
                     super(marca, modelo);
